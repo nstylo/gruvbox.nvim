@@ -95,6 +95,11 @@ local python = lush(function()
     pythonConditional {base.GruvboxRed},
     pythonRepeat {base.GruvboxRed},
     pythonDottedName {base.GruvboxGreenBold},
+    pythonTSClass {base.GruvboxAquaBold},
+    pythonTSOperator {pythonOperator},
+    pythonTSConditional {pythonConditional},
+    pythonTSPunctDelimiter {pythonDot},
+    pythonTSPunctBracket {pythonDot},
   }
 end)
 

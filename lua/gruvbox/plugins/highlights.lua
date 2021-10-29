@@ -19,6 +19,8 @@ local plugins = lush(function()
     -- nvim-treesitter
     TSNone {},
     TSError {base.Error},
+    TSDanger {base.GruvboxRedBold},
+    TSNote {base.GruvboxOrangeBold},
     TSTitle {base.Title},
     TSLiteral {base.String},
     TSURI {base.Underlined},
