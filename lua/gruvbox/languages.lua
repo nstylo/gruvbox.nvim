@@ -196,7 +196,7 @@ end)
 
 local js = lush(function()
   return {
-    javaScriptBraces {base.GruvboxFg1},
+    javaScriptBraces {base.GruvboxFg3},
     javaScriptFunction {base.GruvboxAqua},
     javaScriptIdentifier {base.GruvboxRed},
     javaScriptMember {base.GruvboxBlue},
@@ -205,8 +205,8 @@ local js = lush(function()
     javaScriptParens {base.GruvboxFg3},
     javascriptImport {base.GruvboxAqua},
     javascriptExport {base.GruvboxAqua},
-    javascriptClassKeyword {base.GruvboxAqua},
-    javascriptClassExtends {base.GruvboxAqua},
+    javascriptClassKeyword {base.GruvboxRed},
+    javascriptClassExtends {base.GruvboxRed},
     javascriptDefault {base.GruvboxAqua},
     javascriptClassName {base.GruvboxYellow},
     javascriptClassSuperName {base.GruvboxYellow},
@@ -259,21 +259,41 @@ local js = lush(function()
     javascriptHeadersMethod {base.GruvboxFg1},
     javascriptAsyncFuncKeyword {base.GruvboxRed},
     javascriptAwaitFuncKeyword {base.GruvboxRed},
-    jsClassKeyword {base.GruvboxAqua},
-    jsExtendsKeyword {base.GruvboxAqua},
+    jsSuper {base.GruvboxOrange},
+    jsClassKeyword {base.GruvboxRed},
+    jsExtendsKeyword {base.GruvboxRed},
     jsExportDefault {base.GruvboxAqua},
     jsTemplateBraces {base.GruvboxAqua},
-    jsGlobalNodeObjects {base.GruvboxBlue},
-    jsGlobalObjects {base.GruvboxBlue},
+    jsGlobalNodeObjects {base.GruvboxOrange},
+    jsGlobalObjects {base.GruvboxOrange},
     jsObjectKey {base.GruvboxGreenBold},
-    jsFunction {base.GruvboxAqua},
-    jsFuncCall {base.GruvboxBlue},
+    jsObjectProp {base.GruvboxBlue},
+    jsFunction {base.GruvboxRed},
+    jsFuncCall {base.GruvboxAquaBold},
     jsFuncParens {base.GruvboxFg3},
     jsParens {base.GruvboxFg3},
     jsNull {base.GruvboxPurple},
     jsUndefined {base.GruvboxPurple},
-    jsClassDefinition {base.GruvboxYellow},
+    jsClassDefinition {base.GruvboxYellowBold},
     jsOperatorKeyword {base.GruvboxRed},
+    jsFuncArgOperator {base.GruvboxRed},
+    jsNoise {base.GruvboxFg3},
+    jsDot {jsNoise},
+    jsObjectSeparator {jsNoise},
+    jsDestructuringBraces {jsNoise},
+    jsDestructuringNoise {jsNoise},
+    jsFuncBraces {jsNoise},
+    jsClassBraces {jsNoise},
+    jsModuleBraces {jsNoise},
+    jsSwitchBraces {jsNoise},
+    jsModuleComma {jsNoise},
+    jsIfElseBraces {jsNoise},
+    jsObjectBraces {base.GruvboxFg2},
+    jsBrackets {base.GruvboxFg2},
+    -- Tree Sitter
+    javascriptTSPunctSpecial {base.GruvboxAqua},
+    javascriptTSPunctDelimiter {base.GruvboxOrange},
+    javascriptTSPunctBracket {base.GruvboxOrange},
   }
 end)
 
@@ -302,16 +322,19 @@ local typescript = lush(function()
     typescriptUnion {base.GruvboxOrange},
     typescriptDotNotation {base.GruvboxOrange},
     typescriptGlobalObjectDot {typescriptDotNotation},
+    typescriptImport {base.GruvboxAqua},
   }
 end)
 
 local jsx = lush(function()
   return {
     jsxTagName {base.GruvboxAqua},
-    jsxComponentName {base.GruvboxGreen},
+    jsxComponentName {base.GruvboxGreenBold},
     jsxCloseString {base.GruvboxFg4},
     jsxAttrib {base.GruvboxYellow},
     jsxEqual {base.GruvboxAqua},
+    jsxOpenPunct {base.GruvboxFg4Bold},
+    jsxClosePunct {base.GruvboxFg4Bold},
   }
 end)
 
